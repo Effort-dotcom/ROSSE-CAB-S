@@ -14,13 +14,10 @@
       --black2: #111111;
       --black3: #1a1a1a;
       --gold: #c9a84c;
-      --gold-light: #e8c97e;
       --gold-dark: #9a7a2e;
       --wine: #6b1a2a;
-      --wine-light: #8b2a3e;
       --white: #f9f5ef;
       --white2: #ede8df;
-      --gray: #888;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -31,7 +28,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAVBAR ── */
+    /* NAVBAR */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 1000;
       display: flex; align-items: center; justify-content: space-between;
@@ -66,7 +63,7 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { width: 24px; height: 1.5px; background: var(--gold); display: block; transition: 0.3s; }
 
-    /* ── HERO ── */
+    /* HERO */
     #hero {
       position: relative; height: 100vh; min-height: 700px;
       display: flex; align-items: center; justify-content: center;
@@ -148,7 +145,6 @@
     }
     .hero-badge::after { background: linear-gradient(90deg, var(--gold), transparent); }
 
-    /* ── SECTION SHARED ── */
     section { padding: 100px 60px; }
     .section-tag {
       font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase;
@@ -170,7 +166,6 @@
       max-width: 560px;
     }
 
-    /* ── STATS BAR ── */
     .stats-bar {
       background: var(--wine);
       padding: 30px 60px;
@@ -190,15 +185,12 @@
       color: var(--white2); margin-top: 6px;
     }
 
-    /* ── ABOUT ── */
     #about {
       background: var(--black2);
       display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
       align-items: center;
     }
-    .about-img-wrap {
-      position: relative;
-    }
+    .about-img-wrap { position: relative; }
     .about-img-wrap img {
       width: 100%; height: 520px; object-fit: cover;
       display: block;
@@ -221,7 +213,6 @@
       padding: 7px 16px; font-weight: 600;
     }
 
-    /* ── GALLERY SLIDER ── */
     #gallery { background: var(--black3); text-align: center; padding-bottom: 80px; }
     #gallery .section-tag, #gallery .section-title { display: inline-block; }
     #gallery .section-title { display: block; }
@@ -270,7 +261,6 @@
     .slider-btn.prev { left: 16px; }
     .slider-btn.next { right: 16px; }
 
-    /* ── VARIETIES ── */
     #varieties { background: var(--black2); }
     .varieties-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -290,4 +280,608 @@
     .variety-card:hover::before { transform: scaleX(1); }
     .variety-card:hover { background: #1f1a14; transform: translateY(-4px); }
     .variety-color {
-      width: 
+      width: 14px; height: 14px; border-radius: 50%;
+      display: inline-block; margin-bottom: 18px;
+      box-shadow: 0 0 10px currentColor;
+    }
+    .variety-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem; font-weight: 600; color: var(--white); margin-bottom: 10px;
+    }
+    .variety-type {
+      font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px; font-weight: 600;
+    }
+    .variety-desc { font-size: 0.84rem; color: #999; line-height: 1.8; }
+
+    #price {
+      background: linear-gradient(135deg, var(--black) 0%, var(--wine) 50%, var(--black) 100%);
+      text-align: center; padding: 90px 60px;
+    }
+    .price-box {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      padding: 60px 80px;
+      position: relative;
+      background: rgba(0,0,0,0.5);
+    }
+    .price-label { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5.5rem; font-weight: 700; color: var(--white); line-height: 1;
+    }
+    .price-amount sup { font-size: 2.5rem; vertical-align: super; color: var(--gold); }
+    .price-per { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: #aaa; margin-top: 10px; }
+    .price-note { font-size: 0.78rem; color: #888; margin-top: 22px; font-style: italic; }
+
+    #benefits { background: var(--black3); }
+    .benefits-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px; margin-top: 56px;
+    }
+    .benefit-card { text-align: center; padding: 20px; }
+    .benefit-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px; font-size: 1.8rem;
+      background: rgba(201,168,76,0.07);
+      transition: all 0.4s;
+    }
+    .benefit-card:hover .benefit-icon {
+      background: var(--gold); transform: rotate(5deg) scale(1.1);
+    }
+    .benefit-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 600; color: var(--white); margin-bottom: 10px;
+    }
+    .benefit-text { font-size: 0.82rem; color: #999; line-height: 1.8; }
+
+    #distributors {
+      background: var(--black2);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .dist-visual { position: relative; height: 460px; overflow: hidden; }
+    .dist-visual img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.6) saturate(1.3);
+    }
+    .dist-visual-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(107,26,42,0.7), rgba(0,0,0,0.5));
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      padding: 40px;
+    }
+    .dist-globe { font-size: 3.5rem; margin-bottom: 14px; }
+    .dist-visual-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 600; color: var(--gold); letter-spacing: 2px;
+    }
+    .dist-features { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+    .dist-features li {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 0.87rem; color: #ccc; line-height: 1.6;
+    }
+    .dist-features li::before {
+      content: '◆'; color: var(--gold); font-size: 0.55rem;
+      flex-shrink: 0; margin-top: 5px;
+    }
+
+    #contact { background: var(--black); max-width: 100%; padding: 100px 60px; }
+    .contact-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .contact-inner .gold-line { margin: 22px auto; }
+    .form-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 18px; margin-top: 44px; text-align: left;
+    }
+    .form-full { grid-column: 1 / -1; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label {
+      font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); font-weight: 600;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--black2); border: 1px solid rgba(201,168,76,0.25);
+      color: var(--white); padding: 14px 16px;
+      font-family: 'Montserrat', sans-serif; font-size: 0.87rem;
+      outline: none; transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.04);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      margin-top: 28px; width: 100%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black); padding: 17px;
+      font-size: 0.78rem; letter-spacing: 4px; text-transform: uppercase;
+      font-weight: 700; border: none; cursor: pointer;
+      font-family: 'Montserrat', sans-serif; transition: all 0.35s;
+    }
+    .form-submit:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(201,168,76,0.35); }
+    .form-note { font-size: 0.73rem; color: #666; margin-top: 16px; font-style: italic; }
+
+    footer {
+      background: var(--black2);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      padding: 60px;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;
+    }
+    .footer-brand .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 700; color: var(--gold); letter-spacing: 4px;
+    }
+    .footer-brand p {
+      font-size: 0.82rem; color: #777; line-height: 1.8; margin-top: 14px; max-width: 300px;
+    }
+    .footer-heading {
+      font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px; font-weight: 600;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.83rem; color: #777; text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-contact-item {
+      font-size: 0.83rem; color: #777; margin-bottom: 10px; line-height: 1.6;
+    }
+    .footer-bottom {
+      background: var(--black);
+      text-align: center; padding: 22px;
+      font-size: 0.68rem; letter-spacing: 2px; color: #444;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .footer-bottom span { color: var(--gold); }
+
+    .whatsapp-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 9999;
+      width: 62px; height: 62px; border-radius: 50%;
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+      text-decoration: none; transition: all 0.35s;
+    }
+    .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,0.65); }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1024px) {
+      nav { padding: 18px 30px; }
+      section { padding: 80px 30px; }
+      #about, #distributors { grid-template-columns: 1fr; gap: 50px; }
+      footer { grid-template-columns: 1fr 1fr; gap: 40px; padding: 50px 30px; }
+      .slide { min-width: 50%; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      #hero { height: 100svh; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .form-grid { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr; }
+      .slide { min-width: 100%; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">ROSSE <span>CAB'S</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#gallery">Producción</a></li>
+    <li><a href="#varieties">Variedades</a></li>
+    <li><a href="#price">Precio</a></li>
+    <li><a href="#distributors">Distribuidores</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/593997266694?text=Hola%2C%20quisiera%20consultar%20por%20rosas%20frescas%20Freedom%2C%20Mondial%2C%20Yellow%20Babe%2C%20Deep%20Purple%2C%20Playa%20Blanca%2C%20entre%20otras.%20%C2%BFQu%C3%A9%20variedades%20tienen%20disponibles%20y%20a%20d%C3%B3nde%20hacen%20env%C3%ADos%20(nacional%20e%20internacional)%3F" class="nav-cta" target="_blank">Hacer Pedido</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Pedro Moncayo, Ecuador ✦</p>
+    <h1 class="hero-logo">ROSSE <span>CAB'S</span></h1>
+    <p class="hero-sub">Rosas Premium · Producción local para el mercado nacional e internacional</p>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">📞 Quiero comprar rosas</a>
+      <a href="#varieties" class="btn-outline">Ver Variedades</a>
+    </div>
+  </div>
+  <div class="hero-badge">Scroll para descubrir</div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num">7+</div>
+    <div class="stat-label">Variedades exclusivas</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">$2</div>
+    <div class="stat-label">Por bonche nacional</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Rosas frescas</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">🌍</div>
+    <div class="stat-label">Visión exportadora</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="about-img-wrap reveal">
+    <img src="https://images.unsplash.com/photo-1487530811015-780780169993?w=1200&q=80" alt="Cultivo de rosas en Ecuador"/>
+    <div class="about-img-frame"></div>
+    <div class="about-img-badge">
+      <div class="big">♥</div>
+      <div class="small">Calidad premium</div>
+    </div>
+  </div>
+  <div class="about-text reveal">
+    <p class="section-tag">Sobre Nosotros</p>
+    <h2 class="section-title">Rosas de <em>Pedro Moncayo</em> para Ecuador y el mundo</h2>
+    <div class="gold-line"></div>
+    <p class="section-desc">
+      ROSSE CAB'S es una empresa florícola con sede en Pedro Moncayo, Pichincha — el corazón de las mejores rosas del mundo. Producimos rosas frescas de calidad de exportación con tallos largos, colores intensos y frescura garantizada desde el campo.
+    </p>
+    <p class="section-desc" style="margin-top:16px;">
+      Atendemos tanto al mercado nacional en Ecuador (floristerías, eventos, mayoristas y clientes finales) como a distribuidores internacionales que buscan un aliado confiable en la floricultura andina.
+    </p>
+    <div class="about-tags">
+      <span class="about-tag">Producción propia</span>
+      <span class="about-tag">Mercado nacional</span>
+      <span class="about-tag">Visión exportadora</span>
+      <span class="about-tag">Calidad mundial</span>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <p class="section-tag reveal">Nuestra Producción</p>
+  <h2 class="section-title reveal">Cultivos de <em>rosas frescas</em></h2>
+  <div class="gold-line reveal"></div>
+  <div class="slider-wrapper reveal">
+    <button class="slider-btn prev" onclick="moveSlider(-1)">&#8592;</button>
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1487530811015-780780169993?w=1000&q=80" alt="Freedom Rosa Roja en campo"/>
+        <div class="slide-overlay"><span class="slide-label">Freedom · Rosa Roja</span></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1548586196-aa5803b77379?w=1000&q=80" alt="Mondial Rosa Blanca"/>
+        <div class="slide-overlay"><span class="slide-label">Mondial · Blanca Pura</span></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1455582916367-25f75bfc6710?w=1000&q=80" alt="Pink Mondial Rosa"/>
+        <div class="slide-overlay"><span class="slide-label">Pink Mondial · Rosa</span></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?w=1000&q=80" alt="Yellow Babe Rosa Amarilla"/>
+        <div class="slide-overlay"><span class="slide-label">Yellow Babe · Amarilla</span></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1560717845-968823efbee1?w=1000&q=80" alt="Deep Purple Rosa Lila"/>
+        <div class="slide-overlay"><span class="slide-label">Deep Purple · Lila</span></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?w=1000&q=80" alt="Playa Blanca Rosa Marfil"/>
+        <div class="slide-overlay"><span class="slide-label">Playa Blanca · Marfil</span></div>
+      </div>
+    </div>
+    <button class="slider-btn next" onclick="moveSlider(1)">&#8594;</button>
+  </div>
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<section id="varieties">
+  <p class="section-tag reveal">Portafolio</p>
+  <h2 class="section-title reveal">Nuestras <em>Variedades Premium</em></h2>
+  <div class="gold-line reveal"></div>
+  <div class="varieties-grid">
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#c0392b; color:#c0392b;"></span>
+      <div class="variety-name">Freedom</div>
+      <div class="variety-type">Rosa Roja · Gran Exportación</div>
+      <p class="variety-desc">La reina del mercado internacional. Tallos largos, pétalos aterciopelados de rojo intenso. Ideal para ramos clásicos y arreglos elegantes.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#e67e22; color:#e67e22;"></span>
+      <div class="variety-name">Explorer</div>
+      <div class="variety-type">Naranja · Alta Demanda</div>
+      <p class="variety-desc">Tonos cálidos que van del naranja al durazno. Perfecta para arreglos modernos y decoración de eventos.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#f5f5f0; color:#aaa;"></span>
+      <div class="variety-name">Mondial</div>
+      <div class="variety-type">Blanca Pura · Clásico Atemporal</div>
+      <p class="variety-desc">Blancura impecable y pétalos de gran tamaño. Muy usada en bodas, eventos y arreglos de lujo.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#e91e8c; color:#e91e8c;"></span>
+      <div class="variety-name">Pink Mondial</div>
+      <div class="variety-type">Rosa Intenso · Tendencia</div>
+      <p class="variety-desc">Elegante variación de Mondial en rosa vibrante. Gran aceptación en mercados europeos y norteamericanos.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#f1c40f; color:#f1c40f;"></span>
+      <div class="variety-name">Yellow Babe</div>
+      <div class="variety-type">Amarilla · Alegría & Frescura</div>
+      <p class="variety-desc">Amarillo luminoso con textura aterciopelada. Aporta energía y color a cualquier diseño floral.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#6c3483; color:#6c3483;"></span>
+      <div class="variety-name">Deep Purple</div>
+      <div class="variety-type">Lila Profundo · Exclusiva</div>
+      <p class="variety-desc">Violeta profundo de gran impacto visual. Una de las variedades más exclusivas para arreglos premium.</p>
+    </div>
+    <div class="variety-card reveal">
+      <span class="variety-color" style="background:#fdf6e3; color:#bbb;"></span>
+      <div class="variety-name">Playa Blanca</div>
+      <div class="variety-type">Blanca Marfil · Suavidad Única</div>
+      <p class="variety-desc">Matiz crema suave y elegante. Aporta naturalidad y sofisticación a decoraciones de alto nivel.</p>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="price-box reveal">
+    <p class="price-label">✦ Precio Referencial · Mercado Nacional ✦</p>
+    <div class="price-amount"><sup>$</sup>2</div>
+    <p class="price-per">Por bonche de rosas frescas</p>
+    <p class="price-note">Precios preferenciales para compras al por mayor en Ecuador y cotizaciones personalizadas para exportación internacional.</p>
+    <div style="margin-top:32px;">
+      <a href="#contact" class="btn-primary" style="clip-path:none;">Solicitar cotización</a>
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div style="text-align:center;">
+    <p class="section-tag reveal">¿Por qué elegirnos?</p>
+    <h2 class="section-title reveal">Beneficios para <em>tu negocio</em></h2>
+    <div class="gold-line" style="margin:22px auto;"></div>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal">
+      <div class="benefit-icon">🌹</div>
+      <div class="benefit-title">Rosas frescas</div>
+      <p class="benefit-text">Corte en el punto ideal de apertura. Enviamos rosas con máxima frescura para que duren más en manos de tus clientes.</p>
+    </div>
+    <div class="benefit-card reveal">
+      <div class="benefit-icon">⭐</div>
+      <div class="benefit-title">Calidad exportación</div>
+      <p class="benefit-text">Variedades premium, tallos largos y uniformidad en color. Estándares para mercados nacionales exigentes y exportación.</p>
+    </div>
+    <div class="benefit-card reveal">
+      <div class="benefit-icon">🏔️</div>
+      <div class="benefit-title">Producción local</div>
+      <p class="benefit-text">Cultivadas en Pedro Moncayo, a más de 2.800 msnm. El clima perfecto para rosas de alta gama.</p>
+    </div>
+    <div class="benefit-card reveal">
+      <div class="benefit-icon">🌍</div>
+      <div class="benefit-title">Cobertura nacional e internacional</div>
+      <p class="benefit-text">Atendemos pedidos dentro de Ecuador y construimos alianzas para distribución en otros países.</p>
+    </div>
+  </div>
+</section>
+
+<section id="distributors">
+  <div class="dist-visual reveal">
+    <img src="https://images.unsplash.com/photo-1574684891174-df6b02ab38d7?w=1200&q=80" alt="Distribución de flores"/>
+    <div class="dist-visual-overlay">
+      <div class="dist-globe">🌐</div>
+      <div class="dist-visual-title">Buscamos<br>distribuidores aliados</div>
+    </div>
+  </div>
+  <div class="reveal">
+    <p class="section-tag">Oportunidad de negocio</p>
+    <h2 class="section-title">Distribuidores <em>nacionales e internacionales</em></h2>
+    <div class="gold-line"></div>
+    <p class="section-desc">Si eres floristería, mayorista, importador, decorador de eventos o distribuidor, queremos trabajar contigo. Diseñamos programas de suministro para el mercado nacional e internacional.</p>
+    <ul class="dist-features">
+      <li>Precios especiales y condiciones para compras recurrentes.</li>
+      <li>Variedades premium disponibles durante todo el año.</li>
+      <li>Relación directa con el productor: sin intermediarios.</li>
+      <li>Flexibilidad en volúmenes, colores y frecuencia de entrega.</li>
+      <li>Acompañamiento comercial según tu tipo de negocio.</li>
+    </ul>
+    <div style="margin-top:36px;">
+      <a href="#contact" class="btn-primary" style="clip-path:none; margin-right:14px; display:inline-block;">Quiero ser distribuidor</a>
+      <a href="https://wa.me/593997266694?text=Hola%2C%20estoy%20interesado%20en%20ser%20distribuidor%20de%20ROSSE%20CAB%27S%20a%20nivel%20nacional%20o%20internacional.%20%C2%BFPodemos%20hablar%20de%20condiciones%20y%20vol%C3%BAmenes%3F" class="btn-outline" style="display:inline-block;" target="_blank">Hablar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-tag reveal">Contáctanos</p>
+    <h2 class="section-title reveal">Haz tu <em>pedido</em> hoy</h2>
+    <div class="gold-line reveal"></div>
+    <p class="section-desc reveal" style="margin:0 auto;">Completa el formulario y te responderemos en menos de 24 horas con disponibilidad, precios y opciones de envío nacional o internacional.</p>
+    <form class="form-grid" id="orderForm" onsubmit="submitForm(event)">
+      <div class="form-group reveal">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre" placeholder="Tu nombre y apellido" required>
+      </div>
+      <div class="form-group reveal">
+        <label>Ciudad / Provincia</label>
+        <input type="text" name="ciudad" placeholder="Ej: Quito, Pichincha" required>
+      </div>
+      <div class="form-group reveal">
+        <label>Teléfono / WhatsApp</label>
+        <input type="tel" name="telefono" placeholder="+593 9XX XXX XXX">
+      </div>
+      <div class="form-group reveal">
+        <label>¿Es usted distribuidor?</label>
+        <select name="distribuidor">
+          <option value="">Seleccione una opción</option>
+          <option value="Distribuidor nacional">Sí — Distribuidor Nacional</option>
+          <option value="Distribuidor internacional">Sí — Distribuidor Internacional</option>
+          <option value="Floristería / negocio">Floristería / Negocio</option>
+          <option value="Compra personal">Compra personal / evento</option>
+        </select>
+      </div>
+      <div class="form-group form-full reveal">
+        <label>¿Qué variedades le interesan?</label>
+        <select name="variedades">
+          <option value="">Seleccione una variedad</option>
+          <option value="Freedom (Roja)">Freedom (Roja)</option>
+          <option value="Explorer (Naranja)">Explorer (Naranja)</option>
+          <option value="Mondial (Blanca)">Mondial (Blanca)</option>
+          <option value="Pink Mondial (Rosa)">Pink Mondial (Rosa)</option>
+          <option value="Yellow Babe (Amarilla)">Yellow Babe (Amarilla)</option>
+          <option value="Deep Purple (Lila)">Deep Purple (Lila)</option>
+          <option value="Playa Blanca (Marfil)">Playa Blanca (Marfil)</option>
+          <option value="Varias variedades">Varias variedades</option>
+        </select>
+      </div>
+      <div class="form-group form-full reveal">
+        <label>Cantidad estimada (bonches)</label>
+        <input type="text" name="cantidad" placeholder="Ej: 50 bonches semanales, 200 para evento...">
+      </div>
+      <div class="form-group form-full reveal">
+        <label>Mensaje adicional</label>
+        <textarea name="mensaje" placeholder="Cuéntanos si deseas entrega nacional, exportación, fechas, colores específicos, etc."></textarea>
+      </div>
+      <div class="form-full reveal">
+        <button type="submit" class="form-submit">✦ Enviar solicitud de pedido ✦</button>
+        <p class="form-note">Al enviar, acepta ser contactado por ROSSE CAB'S vía WhatsApp, llamada o correo. Sus datos son confidenciales.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <div class="logo-text">ROSSE CAB'S</div>
+    <p>Productores de rosas frescas y premium desde Pedro Moncayo, Pichincha. Atendemos mercado nacional e iniciamos expansión internacional.</p>
+  </div>
+  <div>
+    <p class="footer-heading">Navegación</p>
+    <ul class="footer-links">
+      <li><a href="#about">Sobre Nosotros</a></li>
+      <li><a href="#gallery">Producción</a></li>
+      <li><a href="#varieties">Variedades</a></li>
+      <li><a href="#price">Precios</a></li>
+      <li><a href="#distributors">Distribuidores</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-heading">Contacto</p>
+    <div class="footer-contact-item">📍 Pedro Moncayo,<br>Pichincha, Ecuador</div>
+    <div class="footer-contact-item">📞 <a href="tel:+593997266694" style="color:#777;text-decoration:none;">0997266694</a></div>
+    <div class="footer-contact-item">💬 <a href="https://wa.me/593997266694" target="_blank" style="color:#777;text-decoration:none;">WhatsApp directo</a></div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2025 <span>ROSSE CAB'S</span> · Rosas Premium Ecuador · Todos los derechos reservados
+</div>
+
+<a href="https://wa.me/593997266694?text=Hola%20ROSSE%20CAB%27S%2C%20quiero%20informaci%C3%B3n%20para%20comprar%20rosas%20frescas%20(mercado%20nacional%20o%20exportaci%C3%B3n)." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(0,0,0,0.97)'
+      : 'linear-gradient(180deg, rgba(0,0,0,0.95) 0%, transparent 100%)';
+  });
+
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    const cta   = document.querySelector('.nav-cta');
+    if (!links) return;
+    const show = links.style.display !== 'flex';
+    links.style.cssText = show
+      ? 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(0,0,0,0.97);padding:30px;gap:20px;'
+      : '';
+    if (cta) cta.style.display = show ? 'none' : '';
+  }
+
+  let currentSlide = 0;
+  const track = document.getElementById('sliderTrack');
+  const slides = track ? track.querySelectorAll('.slide') : [];
+  const dotsContainer = document.getElementById('sliderDots');
+  let slidesPerView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+  let maxSlide = Math.max(0, slides.length - slidesPerView);
+
+  function buildDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i <= maxSlide; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(d);
+    }
+  }
+
+  function goToSlide(n) {
+    currentSlide = Math.max(0, Math.min(n, maxSlide));
+    track.style.transform = `translateX(-${currentSlide * (100 / slidesPerView)}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+  }
+
+  function moveSlider(dir) { goToSlide(currentSlide + dir); }
+
+  buildDots();
+  let autoSlide = setInterval(() => goToSlide((currentSlide + 1) > maxSlide ? 0 : currentSlide + 1), 3800);
+  track && track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  track && track.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(() => goToSlide((currentSlide + 1) > maxSlide ? 0 : currentSlide + 1), 3800);
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  function submitForm(e) {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const nombre    = fd.get('nombre') || '';
+    const ciudad    = fd.get('ciudad') || '';
+    const tel       = fd.get('telefono') || '';
+    const dist      = fd.get('distribuidor') || '';
+    const variedad  = fd.get('variedades') || '';
+    const cantidad  = fd.get('cantidad') || '';
+    const mensaje   = fd.get('mensaje') || '';
+    const text = encodeURIComponent(
+      `Hola ROSSE CAB'S 🌹\n\n` +
+      `*Quiero cotizar/comprar rosas frescas*\n\n` +
+      `*Nombre:* ${nombre}\n` +
+      `*Ciudad / Provincia:* ${ciudad}\n` +
+      `*Teléfono / WhatsApp:* ${tel}\n` +
+      `*Tipo de cliente:* ${dist}\n` +
+      `*Variedad(es) que me interesan:* ${variedad}\n` +
+      `*Cantidad estimada (bonches):* ${cantidad}\n` +
+      `*¿Envío nacional o internacional?:* \n` +
+      `*Detalles adicionales:* ${mensaje}`
+    );
+    window.open(`https://wa.me/593997266694?text=${text}`, '_blank');
+  }
+</script>
+</body>
+</html>
