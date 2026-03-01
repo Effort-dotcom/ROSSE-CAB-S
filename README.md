@@ -1,2 +1,0 @@
-# ROSSE-CAB-S
-ROSAS 
