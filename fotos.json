@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "variedad": "Freedom",
+    "tipo": "Rosa Roja · Gran Exportación",
+    "descripcion": "La reina del mercado internacional. Tallos de distintas medidas, pétalos aterciopelados de rojo intenso.",
+    "imagen": "fotos/freedom.jpg",
+    "badge": "Más vendida",
+    "color": "#c0392b"
+  },
+  {
+    "id": 2,
+    "variedad": "Pink Mondial",
+    "tipo": "Rosa Rosa · Premium",
+    "descripcion": "Rosa vibrante de gran tamaño, ideal para bodas, eventos especiales y arreglos de alto impacto visual.",
+    "imagen": "fotos/pink-mondial.jpg",
+    "badge": "Tendencia",
+    "color": "#e91e8c"
+  },
+  {
+    "id": 3,
+    "variedad": "High Magic",
+    "tipo": "Rosa Bicolor · Exclusiva",
+    "descripcion": "Bicolor espectacular: pétalos amarillos con bordes rosados. Alto impacto visual en cualquier arreglo floral.",
+    "imagen": "fotos/high-magic.jpg",
+    "badge": "Exclusiva",
+    "color": "#f39c12"
+  },
+  {
+    "id": 4,
+    "variedad": "Mandala",
+    "tipo": "Rosa Naranja · Temporada",
+    "descripcion": "Tonos naranja cálido que evolucionan con los días. Perfecta para bouquets modernos y creativos.",
+    "imagen": "fotos/mandala.jpg",
+    "badge": "Temporada",
+    "color": "#e67e22"
+  },
+  {
+    "id": 5,
+    "variedad": "Explorer",
+    "tipo": "Rosa Rojo Oscuro · Exportación",
+    "descripcion": "Rojo oscuro profundo con textura aterciopelada de lujo. Ideal para exportación y arreglos de alta gama.",
+    "imagen": "fotos/explorer.jpg",
+    "badge": "",
+    "color": "#8e0000"
+  },
+  {
+    "id": 6,
+    "variedad": "Playa Blanca",
+    "tipo": "Rosa Blanca · Elegancia",
+    "descripcion": "Blanco puro con toque cremoso. Ideal para matrimonios, primeras comuniones y eventos formales.",
+    "imagen": "fotos/playa-blanca.jpg",
+    "badge": "Nueva",
+    "color": "#e8e0d0"
+  }
+]
