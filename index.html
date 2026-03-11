@@ -279,7 +279,12 @@
 <body>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">ROSSE <span>CAB'S</span></a>
+  <a href="#hero" class="nav-logo">
+    <img src="logo-rosse.png" alt="ROSSE CAB'S" id="logoImg"
+         style="height:48px;width:auto;object-fit:contain;display:block;"
+         onerror="this.style.display='none';document.getElementById('logoText').style.display='block'"/>
+    <span id="logoText" style="display:none;">ROSSE <span>CAB'S</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#about" data-section="about">Nosotros</a></li>
     <li><a href="#gallery" data-section="gallery">Producción</a></li>
@@ -327,8 +332,8 @@
     <div class="stat-label">Rosas del día</div>
   </div>
   <div class="stat-item reveal">
-    <div class="stat-num">🌍</div>
-    <div class="stat-label">Enfoque exportador</div>
+    <div class="stat-num" data-target="2800" data-suffix=" m">0 m</div>
+    <div class="stat-label">Sobre el nivel del mar</div>
   </div>
 </div>
 
@@ -397,51 +402,6 @@
     <button class="slider-btn next" onclick="moveSlider(1)">&#8594;</button>
   </div>
   <div class="slider-dots" id="sliderDots"></div>
-</section>
-
-<!-- VARIEDADES -->
-<section id="varieties">
-  <p class="section-tag reveal">Portafolio</p>
-  <h2 class="section-title reveal">Nuestras <em>Variedades Premium</em></h2>
-  <div class="gold-line reveal"></div>
-  <div class="varieties-grid">
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#c0392b;color:#c0392b;"></span>
-      <div class="variety-name">Freedom</div>
-      <div class="variety-type">Rosa Roja · Gran Exportación</div>
-      <p class="variety-desc">La reina del mercado internacional. Tallos de distintas medidas, pétalos aterciopelados de rojo intenso. Ideal para ramos clásicos y arreglos elegantes.</p>
-    </div>
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#e67e22;color:#e67e22;"></span>
-      <div class="variety-name">Explorer</div>
-      <div class="variety-type">Rojo Oscuro · Alta Demanda</div>
-      <p class="variety-desc">Rojo oscuro profundo con textura aterciopelada de lujo. Tallo recto y robusto, ideal para exportación y arreglos de alta gama.</p>
-    </div>
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#e91e8c;color:#e91e8c;"></span>
-      <div class="variety-name">Pink Mondial</div>
-      <div class="variety-type">Rosa Intenso · Tendencia</div>
-      <p class="variety-desc">Elegante rosa en rosa vibrante de gran tamaño. Gran aceptación en mercados europeos y norteamericanos. Perfecta para bodas y eventos.</p>
-    </div>
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#f39c12;color:#f39c12;"></span>
-      <div class="variety-name">High Magic</div>
-      <div class="variety-type">Bicolor · Exclusiva</div>
-      <p class="variety-desc">Espectacular bicolor: pétalos amarillos con bordes rosados únicos. Alto impacto visual que sorprende en cualquier arreglo floral.</p>
-    </div>
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#e67e22;color:#e67e22;"></span>
-      <div class="variety-name">Mandala</div>
-      <div class="variety-type">Naranja · Temporada</div>
-      <p class="variety-desc">Tonos naranja cálido que evolucionan con los días. Una rosa de carácter propio, perfecta para bouquets modernos y creativos.</p>
-    </div>
-    <div class="variety-card reveal">
-      <span class="variety-color" style="background:#fdf6e3;color:#bbb;"></span>
-      <div class="variety-name">Playa Blanca</div>
-      <div class="variety-type">Blanca Marfil · Elegancia</div>
-      <p class="variety-desc">Blanco puro con toque cremoso. Símbolo de elegancia y pureza. Muy solicitada para matrimonios, primeras comuniones y eventos formales.</p>
-    </div>
-  </div>
 </section>
 
 <!-- GALERÍA CON JSON -->
@@ -676,7 +636,7 @@
 <!-- MAPA -->
 <div id="mapa">
   <div class="mapa-inner">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.535!2d-78.224!3d0.087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a0f5b5b5b5b5b%3A0x8e2a0f5b5b5b5b5b!2sTupigachi%2C%20Pedro%20Moncayo!5e0!3m2!1ses!2sec!4v1700000000000!5m2!1ses!2sec" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.18!2d-78.18573!3d0.1027046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMAzJzA5LjciTiA3OMKwMTEnMDguNiJX!5e0!3m2!1ses!2sec!4v1710000000000!5m2!1ses!2sec" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="mapa-label">
       <div class="ml">📍 Nuestra Ubicación</div>
       <div class="ms">Loma Gorda · Tupigachi · Pedro Moncayo · Ecuador</div>
@@ -689,17 +649,7 @@
   <div class="footer-brand">
     <div class="logo-text">ROSSE CAB'S</div>
     <p>Productores de rosas frescas premium desde Loma Gorda, Tupigachi, Pedro Moncayo — Pichincha, Ecuador.</p>
-    <div class="footer-social">
-      <a href="https://www.facebook.com" target="_blank" title="Facebook" aria-label="Facebook">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com" target="_blank" title="TikTok" aria-label="TikTok">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
-      </a>
-      <a href="https://www.instagram.com" target="_blank" title="Instagram" aria-label="Instagram">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="var(--black2)"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--black2)" stroke-width="2"/></svg>
-      </a>
-    </div>
+<!-- redes sociales: agregar links cuando estén listos -->
   </div>
   <div>
     <p class="footer-heading">Navegación</p>
